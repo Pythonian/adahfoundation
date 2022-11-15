@@ -1,10 +1,9 @@
 from django.shortcuts import get_object_or_404, render, redirect
-from django.contrib.auth.decorators import login_required
 from django.core.mail import EmailMessage
 from django.contrib import messages
 from django.conf import settings
 
-from .models import HomePage, Team, About
+from .models import HomePage, Team, About, Work
 from .forms import ContactForm
 
 
@@ -16,11 +15,9 @@ def home(request):
 
 def team(request):
     teams = Team.objects.all()
-
     return render(request, 'team.html', {'teams': teams})
     
 
-@login_required
 def contact(request):
     from_email = settings.DEFAULT_FROM_EMAIL
     if request.method == 'POST':
@@ -50,8 +47,8 @@ def about(request):
     
 
 def works(request):
-
-    return render(request, 'works.html', {})
+    works = Work.objects.all()
+    return render(request, 'works.html', {'works': works})
     
 
 def profile(request, slug):

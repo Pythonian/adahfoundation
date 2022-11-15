@@ -52,9 +52,6 @@ class About(models.Model):
 
 
 class Work(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, blank=True, null=True, help_text='Optional')
     content = RichTextField()
     image = models.ImageField(upload_to='works')
-
-    def __str__(self):
-        return self.title

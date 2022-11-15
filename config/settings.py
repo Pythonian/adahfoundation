@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
-    'django.contrib.flatpages',
 
     'core',
+    'django_cleanup',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -54,8 +54,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'config.urls'
-
-SITE_ID = 1
 
 TEMPLATES = [
     {

@@ -23,19 +23,10 @@
     <link href="{% static 'styles/aos.css' %}" rel="stylesheet">
     <link href="{% static 'styles/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'styles/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-    <link href="{% static 'styles/glightbox.min.css' %}" rel="stylesheet">
     <link href="{% static 'styles/remixicon/remixicon.css' %}" rel="stylesheet">
-    <link href="{% static 'styles/swiper-bundle.min.css' %}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="{% static 'styles/style.css' %}" rel="stylesheet">
-
-    <!-- =======================================================
-  * Template Name: FlexStart - v1.11.1
-  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -52,7 +43,7 @@
                 <ul>
                     <li><a class="nav-link {% url 'home' as home_url %}{% if request.get_full_path == home_url %}active{% endif %}" href="{% url 'home' %}">Home</a></li>
                     <li><a class="nav-link {% url 'about' as about_url %}{% if request.get_full_path == about_url %}active{% endif %}" href="{% url 'about' %}">About Us</a></li>
-                    <li><a class="nav-link {% url 'works' as works_url %}{% if request.get_full_path == works_url %}active{% endif %}" href="{% url 'works' %}">Works</a></li>
+                    <li><a class="nav-link {% url 'works' as works_url %}{% if request.get_full_path == works_url %}active{% endif %}" href="{% url 'works' %}">What We Do</a></li>
                     <li><a class="nav-link {% url 'team' as team_url %}{% if request.get_full_path == team_url %}active{% endif %}" href="{% url 'team' %}">Our Team</a></li>
                     <li><a class="nav-link {% url 'contact' as contact_url %}{% if request.get_full_path == contact_url %}active{% endif %}" href="{% url 'contact' %}">Contact Us</a></li>
                     <li><a class="getstarted" href="{# url 'donate' #}">Donate</a></li>
@@ -68,71 +59,9 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
 
-        <div class="footer-newsletter">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12 text-center">
-                        <h4>Our Newsletter</h4>
-                        <p>Stay updated to our events, programs and charity work in the society.</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-top">
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-5 col-md-12 footer-info">
-                        <a href="index.html" class="logo d-flex align-items-center mb-4">
-                            <span>AdahCareFoundation</span>
-                        </a>
-                        <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
-                            valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora fugit sit iusto quam totam.
-                        </p>
-                        <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="ms-lg-auto col-lg-2 col-6 footer-links">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'home' %}">Home</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="{# url 'works' #}">Services</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="/terms/">Terms of service</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="/privacy/">Privacy policy</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                        <h4>Contact Us</h4>
-                        <p>
-                            23 Sholabomi Crescent <br>
-                            Off Oladimeji Street,<br>
-                            Aguda, Surulere. <br><br>
-                            <strong>Phone:</strong> +234 801 2222 333<br>
-                            <strong>Email:</strong> info@example.com<br>
-                        </p>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
         <div class="container">
             <div class="copyright">
-                &copy; Copyright 2022 &bull; <strong><span>AdahCareFoundation</span></strong>. All Rights Reserved
+                &copy; Copyright {% now 'Y' %} &bull; <strong><span>AdahCareFoundation</span></strong>. All Rights Reserved
             </div>
             <!-- <div class="credits">
                 Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
@@ -144,14 +73,8 @@
             class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="{% static 'scripts/purecounter_vanilla.js' %}"></script>
     <script src="{% static 'scripts/aos.js' %}"></script>
     <script src="{% static 'scripts/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'scripts/glightbox.min.js' %}"></script>
-    <script src="{% static 'scripts/isotope.pkgd.min.js' %}"></script>
-    <script src="{% static 'scripts/swiper-bundle.min.js' %}"></script>
-
-    <!-- Template Main JS File -->
     <script src="{% static 'scripts/main.js' %}"></script>
 
 </body>

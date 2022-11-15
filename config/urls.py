@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('team/', views.team, name='team'),
-    path('profile/', views.profile, name='profile'),
+    path('profile/<slug:slug>/', views.profile, name='profile'),
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
     path('works/', views.works, name='works'),
@@ -34,3 +34,7 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+admin.site.site_header = 'Backend Admin'
+admin.site.index_title = 'Adah Care Foundation'
+admin.site.site_title = 'Admin Dashboard'
